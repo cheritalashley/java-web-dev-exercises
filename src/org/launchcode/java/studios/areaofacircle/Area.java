@@ -1,4 +1,4 @@
-package org.launchcode.java.studios.areaofacircle;
+package src.org.launchcode.java.studios.areaofacircle;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -25,6 +25,7 @@ public class Area {
             } else {
             double area = Circle.getArea(radiusDouble);
             System.out.println("The area of a circle of radius " + radius + " is: " + area);
+
             }
         }
     }
