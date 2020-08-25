@@ -1,6 +1,7 @@
 package src.exercises;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class arrayListPractice {
@@ -24,8 +25,9 @@ public class arrayListPractice {
         int sum = sumEvenNumbers(numbers);
         System.out.println("Sum: " + sum);
 
-        ArrayList<String> words = new ArrayList<>();
-        words.add("Hi this exercise is crazy");
+        //ArrayList<String> words = new ArrayList<>();
+        String phase = "Hi this exercise is crazy";
+        ArrayList<String> words = new ArrayList<>(Arrays.asList(phase.split(" ")));
         printWord(words, num);
     }
 
@@ -43,6 +45,7 @@ public class arrayListPractice {
     //Write a static method to print out each word in a list that has exactly 5 letters.
     //Modify your code to prompt the user to enter the word length for the search.
     public static void printWord(ArrayList<String> words, int num) {
+        /*System.out.println(words);
         String[] listWords = new String[words.size()];
         words.toArray(listWords);
         String list = "";
@@ -54,7 +57,20 @@ public class arrayListPractice {
             if(x.length()==num){
                 System.out.println(x);
             }
+        }*/
+        boolean exist = false;
+        for (String word : words) {
+            if (word.length() == num) {
+                exist = true;
+                System.out.println(word);
+            }
         }
+
+        if(!exist){
+            System.out.println("The word list does not exist");
+        }
+
+
     }
 
     //BONUS: Instead of creating our own list of words, what if we want to use the string from
